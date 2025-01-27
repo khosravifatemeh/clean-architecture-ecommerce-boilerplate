@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Database",
+      "type": "shell",
+      "command": "make start_db",
+      "problemMatcher": []
+    },
+    {
+      "label": "Stop Database",
+      "type": "shell",
+      "command": "make stop_db",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Migrations",
+      "type": "shell",
+      "command": "make migrate",
+      "problemMatcher": []
+    },
+    {
+      "label": "Rollback Migration",
+      "type": "shell",
+      "command": "make migrate-down",
+      "problemMatcher": []
+    },
+    {
+      "label": "Create Migration",
+      "type": "shell",
+      "command": "make create_migration",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Server",
+      "type": "shell",
+      "command": "make server",
+      "problemMatcher": []
+    }
+  ]
+}
