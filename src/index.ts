@@ -1,5 +1,5 @@
 import express from "express";
-import router from "./productRoutes";
+import router from "./routes/productRoutes";
 const PORT = process.env.PORT || 9000;
 const app = express();
 app.use(express.json());
