@@ -1,13 +1,18 @@
 import { IProductInteractor } from "../interfaces/IProductInteractor";
+import { IProductRepository } from "../interfaces/IProductRepository";
 
 export class ProductInteractor implements IProductInteractor {
-  createProduct(input: any) {
-    throw new Error("Method not implemented.");
+  private repository: IProductRepository;
+  constructor(repository: IProductRepository) {
+    this.repository = repository;
+  }
+  async createProduct(input: any) {
+    return this.repository.create(input);
   }
   updateStock(id: number, stock: number) {
-    throw new Error("Method not implemented.");
+    return this.repository.update(id, stock);
   }
   getProducts(limit: number, offset: number) {
-    throw new Error("Method not implemented.");
+    return this.repository.find(limit, offset);
   }
 }
