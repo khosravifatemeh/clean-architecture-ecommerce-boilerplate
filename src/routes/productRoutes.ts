@@ -1,6 +1,11 @@
 import { ProductController } from "../controllers/ProductController";
 import express from "express";
-const controller = new ProductController();
+import { ProductRepository } from "../repositories/ProductRepository";
+import { ProductInteractor } from "../interactors/productInteractor";
+
+const repository = new ProductRepository();
+const interactor = new ProductInteractor(repository);
+const controller = new ProductController(interactor);
 
 const router = express.Router();
 
