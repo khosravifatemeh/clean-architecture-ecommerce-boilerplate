@@ -9,8 +9,8 @@ const controller = new ProductController(interactor);
 
 const router = express.Router();
 
-router.post("/products", controller.onCreateProduct);
-router.get("/products", controller.onGetProduct);
-router.patch("/products/:id", controller.onUpdateStock);
+router.post("/products", controller.onCreateProduct.bind(controller));
+router.get("/products", controller.onGetProduct.bind(controller));
+router.patch("/products/:id", controller.onUpdateStock.bind(controller));
 
 export default router;
