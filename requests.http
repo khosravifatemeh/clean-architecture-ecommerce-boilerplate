@@ -1,15 +1,15 @@
-#Create Product
+### Create Product
 POST http://localhost:9000/products
 Content-Type: application/json
 
-    {
-    "name":"Mac Pro",
-    "description":"A Desktop Computer",
-    "stock":200,
-    "price":9000
-    }
+{
+    "name": "Mac Pro",
+    "description": "A Desktop Computer",
+    "stock": 200,
+    "price": 9000
+}
 
-## Get Products
+### Get Products
 GET http://localhost:9000/products
 Content-Type: application/json
 
